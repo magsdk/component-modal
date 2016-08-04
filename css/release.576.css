@@ -1,0 +1,124 @@
+.component.panelEx.main.position-right {
+    left: 250px; }
+
+.component.panelEx.main.position-left {
+    left: 80px; }
+
+.component.panelEx.right > .title {
+    background: #151515;
+    -webkit-transform: rotate(90deg);
+    width: 320px;
+    position: absolute;
+    top: 140px;
+    right: -140px;
+    text-align: center;
+    padding: 0;
+    z-index: 1; }
+
+.component.panelEx.left > .title {
+    background: #151515;
+    -webkit-transform: rotate(-90deg);
+    width: 320px;
+    position: absolute;
+    top: 140px;
+    left: -140px;
+    text-align: center;
+    padding: 0;
+    z-index: 1; }
+
+.component.panelEx.expand > .title {
+    width: inherit;
+    -webkit-transform: none;
+    position: static;
+    text-align: left;
+    padding-left: 20px; }
+
+.component.panelEx.main.position-right {
+    left: 240px; }
+
+.component.panelEx.main.position-left {
+    left: 90px; }
+
+.component.panelEx.right > .title {
+    background: #151515;
+    -webkit-transform: rotate(90deg);
+    width: 360px;
+    position: absolute;
+    top: 157px;
+    right: -158px;
+    text-align: center;
+    padding: 0;
+    z-index: 1; }
+
+.component.panelEx.left > .title {
+    background: #151515;
+    -webkit-transform: rotate(-90deg);
+    width: 360px;
+    position: absolute;
+    top: 157px;
+    left: -158px;
+    text-align: center;
+    padding: 0;
+    z-index: 1; }
+
+.component.panelEx.expand > .title {
+    width: inherit;
+    -webkit-transform: none;
+    position: static;
+    text-align: left;
+    padding-left: 20px; }
+
+/* mag-component-layout-list:  release */
+.component.modalMessage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: table;
+    z-index: 10; }
+    .component.modalMessage.active > div > div > div.overlay {
+        display: none; }
+    .component.modalMessage > div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
+        .component.modalMessage > div > div {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            max-width: 80%;
+            min-width: 172.5px;
+            max-height: 80%; }
+            .component.modalMessage > div > div > div.header {
+                height: 50px;
+                line-height: 50px;
+                font-size: 24px;
+                padding: 0 20px; }
+                .component.modalMessage > div > div > div.header .icon {
+                    height: 36px;
+                    width: 36px;
+                    display: table-cell;
+                    background: no-repeat center center; }
+                .component.modalMessage > div > div > div.header .text {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center; }
+                    .component.modalMessage > div > div > div.header .text:empty {
+                        padding: 0; }
+            .component.modalMessage > div > div > div.body > .component.list .item {
+                height: 45px;
+                line-height: 45px;
+                padding: 0 20px; }
+                .component.modalMessage > div > div > div.body > .component.list .item .component.checkBox, .component.modalMessage > div > div > div.body > .component.list .item .component.layout > div.icon {
+                    height: 45px;
+                    line-height: 45px;
+                    width: 33.75px;
+                    text-align: left; }
+            .component.modalMessage > div > div > div.overlay {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0; }
