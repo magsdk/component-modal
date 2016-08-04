@@ -21,7 +21,16 @@ npm install mag-component-modal
 Add the singleton to the scope:
 
 ```js
-var modal = require('mag-component-modal');
+var Modal = require('mag-component-modal');
+
+page.modal = new Modal({
+    title: 'My Title',
+    icon: 'star',
+    children: [new Button({value: 'Create'})]
+});
+
+page.add(page.modal);
+page.modal.show();
 ```
 
 

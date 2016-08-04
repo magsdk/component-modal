@@ -22,9 +22,9 @@ var Component = require('stb-component');
  * @param {Object} [config.icon] icon at header
  * @param {Object} [config.visible] visibility flag
  * @param {Object} [config.children] content (inherited from the parent)
+ * @example
  *
- *
- * page.modalMessage = new ModalMessage({
+ * page.modalMessage = new Modal({
  *        title: 'My Title',
  *        icon: 'star',
  *        children: [new Button({value: 'Create'})]
@@ -33,7 +33,7 @@ var Component = require('stb-component');
  * page.modalMessage.show();
  *
  */
-function ModalMessage ( config ) {
+function Modal ( config ) {
     var $overlay;
 
     // sanitize
@@ -45,7 +45,7 @@ function ModalMessage ( config ) {
         if ( config.icon && typeof config.icon !== 'string' ) { throw new Error(__filename + ': wrong or empty config.icon'); }
         if ( config.title && typeof config.title !== 'string' ) { throw new Error(__filename + ': wrong or empty config.title'); }
         if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
-        if ( config.$body ) { throw new Error(__filename + ': config.$body should not be provided in ModalMessage manually'); }
+        if ( config.$body ) { throw new Error(__filename + ': config.$body should not be provided in Modal manually'); }
     }
 
     // usually can't accept focus
@@ -93,14 +93,14 @@ function ModalMessage ( config ) {
 
 
 // inheritance
-ModalMessage.prototype = Object.create(Component.prototype);
-ModalMessage.prototype.constructor = ModalMessage;
+Modal.prototype = Object.create(Component.prototype);
+Modal.prototype.constructor = Modal;
 
 
 /**
  * Redefine default component focus to set additional css
  */
-ModalMessage.prototype.focus = function () {
+Modal.prototype.focus = function () {
     this.$node.classList.add('active');
     Component.prototype.focus.call(this);
     if ( this.children[0] && this.children[0] instanceof Component ) {
@@ -111,11 +111,11 @@ ModalMessage.prototype.focus = function () {
 /**
  * Blur message
  */
-ModalMessage.prototype.blur = function () {
+Modal.prototype.blur = function () {
     this.$node.classList.remove('active');
     Component.prototype.blur.call(this);
 };
 
 
 // public
-module.exports = ModalMessage;
+module.exports = Modal;

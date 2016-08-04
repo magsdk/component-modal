@@ -16,8 +16,7 @@
         "jsdoc": "jsdoc --destination doc *.js readme.md"
     },
     "dependencies": {
-        "stb-component-list": "stbsdk/component-list",
-        "mag-component-layout": "magsdk/component-layout"
+        "stb-component": "stbsdk/component"
     },
     "devDependencies": {
         "mag-eslint-config": "magsdk/eslint-config"
