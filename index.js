@@ -7,6 +7,7 @@
 
 'use strict';
 
+// TODO: switch to stb-component-modal
 var Component = require('stb-component');
 
 
@@ -22,16 +23,6 @@ var Component = require('stb-component');
  * @param {Object} [config.icon] icon at header
  * @param {Object} [config.visible] visibility flag
  * @param {Object} [config.children] content (inherited from the parent)
- * @example
- *
- * page.modalMessage = new Modal({
- *        title: 'My Title',
- *        icon: 'star',
- *        children: [new Button({value: 'Create'})]
- *    });
- * page.add(page.modalMessage);
- * page.modalMessage.show();
- *
  */
 function Modal ( config ) {
     var $overlay;
@@ -107,6 +98,7 @@ Modal.prototype.focus = function () {
         this.children[0].focus();
     }
 };
+
 
 /**
  * Blur message
