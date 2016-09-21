@@ -1,74 +1,15 @@
 // $license The MIT License (MIT)
 // $copyright Stanislav Kalashnik <darkpark.main$gmail.com>
 
-/* mag-component-layout-list:  release */
-.component.modalMessage {
-    width: $width;
-    height: $height;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: table;
-    z-index: 10;
+@import "body";
+@import "../node_modules/stb-component-modal/sass/main";
+@import "../node_modules/stb-component/sass/main";
 
-    &.active > div > div > div.overlay { display: none; }
+.mag-component-panel {
+    @include stb-component-release;
+    @include mag-component-modal;
 
-    > div {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-
-        > div {
-            position: relative;
-            display: inline-block;
-            overflow: hidden;
-            max-width: 80%;
-            min-width: $panelWidth * 0.75;
-            max-height: 80%;
-
-            & > div.header {
-                height: $panelMainTitleHeight;
-                line-height: $panelMainTitleHeight;
-                font-size: $panelMainTitleFontSize;
-                padding: 0 $safePadding;
-
-                .icon {
-                    //font-size: $fontSize * 1.75;
-                    height: $buttonHeight;
-                    width: $buttonHeight;
-                    display: table-cell;
-                    background: no-repeat center center;
-                }
-
-                .text {
-                    display: table-cell;
-                    vertical-align: middle;
-                    text-align: center;
-                    &:empty { padding: 0; }
-                }
-
-            }
-            & > div.body > .component.list .item {
-                height: $panelTitleHeight;
-                line-height: $panelTitleHeight;
-                padding: 0 $safePadding;
-
-                .component.checkBox, .component.layout > div.icon {
-                    //font-size: $fontSize * 1.75;
-                    height: $panelTitleHeight;
-                    line-height: $panelTitleHeight;
-                    width: $panelTitleHeight * 0.75;
-                    text-align: left;
-                }
-            }
-            & > div.overlay {
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
+    @if $DEVELOP {
+        @include stb-component-develop;
     }
 }

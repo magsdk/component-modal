@@ -42,7 +42,7 @@ function Modal ( config ) {
     // usually can't accept focus
     config.focusable = config.focusable || false;
     // set default className if classList property empty or undefined
-    config.className = 'modalMessage ' + (config.className || '');
+    //config.className = 'modalMessage ' + (config.className || '');
     // hide by default
     config.visible = config.visible || false;
     // create centered div
@@ -86,6 +86,9 @@ function Modal ( config ) {
 // inheritance
 Modal.prototype = Object.create(Component.prototype);
 Modal.prototype.constructor = Modal;
+
+// set component name
+Modal.prototype.name = 'mag-component-modal';
 
 
 /**

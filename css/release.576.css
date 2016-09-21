@@ -68,8 +68,33 @@
     text-align: left;
     padding-left: 20px; }
 
-/* mag-component-layout-list:  release */
-.component.modalMessage {
+.stb-component-modal {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table; }
+    .stb-component-modal.hidden {
+        display: none; }
+    .stb-component-modal > div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
+        .stb-component-modal > div > div.body {
+            display: inline-block;
+            overflow: hidden;
+            background-color: #333;
+            padding: 3%;
+            max-width: 80%;
+            max-height: 80%; }
+
+.mag-component-panel {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -77,45 +102,47 @@
     top: 0;
     display: table;
     z-index: 10; }
-    .component.modalMessage.active > div > div > div.overlay {
+    .mag-component-panel.hidden {
         display: none; }
-    .component.modalMessage > div {
+    .mag-component-panel.active > div > div > div.overlay {
+        display: none; }
+    .mag-component-panel > div {
         display: table-cell;
         vertical-align: middle;
         text-align: center; }
-        .component.modalMessage > div > div {
+        .mag-component-panel > div > div {
             position: relative;
             display: inline-block;
             overflow: hidden;
             max-width: 80%;
             min-width: 172.5px;
             max-height: 80%; }
-            .component.modalMessage > div > div > div.header {
+            .mag-component-panel > div > div > div.header {
                 height: 50px;
                 line-height: 50px;
                 font-size: 24px;
                 padding: 0 20px; }
-                .component.modalMessage > div > div > div.header .icon {
+                .mag-component-panel > div > div > div.header .icon {
                     height: 36px;
                     width: 36px;
                     display: table-cell;
                     background: no-repeat center center; }
-                .component.modalMessage > div > div > div.header .text {
+                .mag-component-panel > div > div > div.header .text {
                     display: table-cell;
                     vertical-align: middle;
                     text-align: center; }
-                    .component.modalMessage > div > div > div.header .text:empty {
+                    .mag-component-panel > div > div > div.header .text:empty {
                         padding: 0; }
-            .component.modalMessage > div > div > div.body > .component.list .item {
+            .mag-component-panel > div > div > div.body > .mag-component-list .item {
                 height: 45px;
                 line-height: 45px;
                 padding: 0 20px; }
-                .component.modalMessage > div > div > div.body > .component.list .item .component.checkBox, .component.modalMessage > div > div > div.body > .component.list .item .component.layout > div.icon {
+                .mag-component-panel > div > div > div.body > .mag-component-list .item .stb-component-checkbox, .mag-component-panel > div > div > div.body > .mag-component-list .item .mag-component-layout > div.icon {
                     height: 45px;
                     line-height: 45px;
                     width: 33.75px;
                     text-align: left; }
-            .component.modalMessage > div > div > div.overlay {
+            .mag-component-panel > div > div > div.overlay {
                 display: block;
                 width: 100%;
                 height: 100%;
