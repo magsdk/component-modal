@@ -33,14 +33,6 @@
                 font-size: $panelMainTitleFontSize;
                 padding: 0 $safePadding;
 
-                .icon {
-                    //font-size: $fontSize * 1.75;
-                    height: $buttonHeight;
-                    width: $buttonHeight;
-                    display: table-cell;
-                    background: no-repeat center center;
-                }
-
                 .text {
                     display: table-cell;
                     vertical-align: middle;
@@ -51,17 +43,25 @@
                 }
 
             }
-            & > div.body > .mag-component-list .item {
-                height: $panelTitleHeight;
-                line-height: $panelTitleHeight;
-                padding: 0 $safePadding;
-
-                .stb-component-checkbox, .mag-component-layout > div.icon {
-                    //font-size: $fontSize * 1.75;
+            & > div.body > div {
+                @include mag-component-list;
+                .item {
                     height: $panelTitleHeight;
                     line-height: $panelTitleHeight;
-                    width: $panelTitleHeight * 0.75;
-                    text-align: left;
+                    padding: 0 $safePadding;
+
+                    //div {
+                    //    @include spa-component-checkbox;
+                    //}, div {
+                    //    @include mag-component-layout;
+                    //}
+                    //> div.icon {
+                    //    //font-size: $fontSize * 1.75;
+                    //    height: $panelTitleHeight;
+                    //    line-height: $panelTitleHeight;
+                    //    width: $panelTitleHeight * 0.75;
+                    //    text-align: left;
+                    //}
                 }
             }
             & > div.overlay {

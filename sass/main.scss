@@ -3,6 +3,9 @@
 
 @import "body";
 @import "../node_modules/stb-component/sass/main";
+@import "../node_modules/mag-component-list/sass/body";
+//@import "../node_modules/spa-component-checkbox/sass/body";
+//@import "../node_modules/mag-component-layout/sass/body";
 
 .mag-component-modal {
     @include stb-component-release;
