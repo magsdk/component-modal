@@ -52,14 +52,17 @@ function Modal ( config ) {
     // parent constructor call
     Component.call(this, config);
 
+    this.$node.classList.add('theme-modal');
+
     // add table-cell wrappers
     this.$node.appendChild(document.createElement('div'));
     this.$node.firstChild.classList.add('alignBox');
     this.$node.firstChild.appendChild(document.createElement('div'));
+    this.$node.firstChild.firstChild.className = 'theme-main';
 
     // add header div
     this.$header = document.createElement('div');
-    this.$header.className = 'header';
+    this.$header.className = 'header theme-header';
 
     // insert caption placeholder
     this.$text = this.$header.appendChild(document.createElement('div'));
