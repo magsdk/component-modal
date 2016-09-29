@@ -35,7 +35,6 @@
                     .mag-component-modal > div > div > div.header .text:empty {
                         padding: 0; }
             .mag-component-modal > div > div > div.body > div {
-                background-color: #333;
                 width: 100%; }
                 .mag-component-modal > div > div > div.body > div > .body > .item {
                     cursor: pointer;
