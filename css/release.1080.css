@@ -34,26 +34,10 @@
                     text-align: center; }
                     .mag-component-modal > div > div > div.header .text:empty {
                         padding: 0; }
-            .mag-component-modal > div > div > div.body > div {
-                width: 100%; }
-                .mag-component-modal > div > div > div.body > div > .body > .item {
-                    cursor: pointer;
-                    padding: 0 12px;
-                    vertical-align: middle;
-                    height: 72px;
-                    line-height: 72px; }
-                .mag-component-modal > div > div > div.body > div.horizontal {
-                    display: table;
-                    table-layout: fixed;
-                    width: 100%; }
-                    .mag-component-modal > div > div > div.body > div.horizontal > .item {
-                        display: table-cell;
-                        text-align: center;
-                        vertical-align: middle; }
-                .mag-component-modal > div > div > div.body > div .item {
-                    height: 90px;
-                    line-height: 90px;
-                    padding: 0 30px; }
+            .mag-component-modal > div > div > div.body > div .item {
+                height: 90px;
+                line-height: 90px;
+                padding: 0 30px; }
             .mag-component-modal > div > div > div.overlay {
                 display: block;
                 width: 100%;

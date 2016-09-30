@@ -36,26 +36,10 @@
                     text-align: center; }
                     .mag-component-modal > div > div > div.header .text:empty {
                         padding: 0; }
-            .mag-component-modal > div > div > div.body > div {
-                width: 100%; }
-                .mag-component-modal > div > div > div.body > div > .body > .item {
-                    cursor: pointer;
-                    padding: 0 5px;
-                    vertical-align: middle;
-                    height: 32px;
-                    line-height: 32px; }
-                .mag-component-modal > div > div > div.body > div.horizontal {
-                    display: table;
-                    table-layout: fixed;
-                    width: 100%; }
-                    .mag-component-modal > div > div > div.body > div.horizontal > .item {
-                        display: table-cell;
-                        text-align: center;
-                        vertical-align: middle; }
-                .mag-component-modal > div > div > div.body > div .item {
-                    height: 40px;
-                    line-height: 40px;
-                    padding: 0 20px; }
+            .mag-component-modal > div > div > div.body > div .item {
+                height: 40px;
+                line-height: 40px;
+                padding: 0 20px; }
             .mag-component-modal > div > div > div.overlay {
                 display: block;
                 width: 100%;

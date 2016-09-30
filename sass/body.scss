@@ -44,7 +44,7 @@
 
             }
             & > div.body > div {
-                @include mag-component-list;
+                //@include mag-component-list;
                 .item {
                     height: $panelTitleHeight;
                     line-height: $panelTitleHeight;
