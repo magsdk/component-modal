@@ -23,12 +23,32 @@ var Component = require('stb-component');
  * @param {Object} [config.icon] icon at header
  * @param {Object} [config.visible] visibility flag
  * @param {Object} [config.children] content (inherited from the parent)
+ *
+ * @example
+ * var modalSort = new Modal({
+ *     visible: false,
+ *     title: 'sort',
+ *     events: {
+ *         show: function () {
+ *             list.focus();
+ *         },
+ *         hide: function () {
+ *             page.panelSet.focus();
+ *         }
+ *     },
+ *     children: [list = new RadioList({})]
+ * });
+ * page.add(modalSort);
  */
+
+
 function Modal ( config ) {
-    var $overlay;
+    var $overlay,
+        self = this;
 
     // sanitize
     config = config || {};
+    config.events = config.events || {};
 
     if ( DEVELOP ) {
         if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
@@ -41,28 +61,25 @@ function Modal ( config ) {
 
     // usually can't accept focus
     config.focusable = config.focusable || false;
-    // set default className if classList property empty or undefined
-    //config.className = 'modalMessage ' + (config.className || '');
     // hide by default
     config.visible = config.visible || false;
     // create centered div
     config.$body = document.createElement('div');
     config.$body.className = 'body';
+    // add default close by click
+    config.events.click = config.events.click || function () { self.hide(); };
+
 
     // parent constructor call
     Component.call(this, config);
-
-    //this.$node.classList.add('theme-modal');
 
     // add table-cell wrappers
     this.$node.appendChild(document.createElement('div'));
     this.$node.firstChild.classList.add('alignBox');
     this.$node.firstChild.appendChild(document.createElement('div'));
-    //this.$node.firstChild.firstChild.className = 'theme-main';
 
     // add header div
     this.$header = document.createElement('div');
-    //this.$header.className = 'header theme-header';
     this.$header.className = 'header';
 
     // insert caption placeholder
@@ -72,7 +89,6 @@ function Modal ( config ) {
 
     // optional icon
     if ( config.icon ) {
-        // insert icon
         this.$icon = this.$header.appendChild(document.createElement('div'));
         this.$icon.className = 'icon ' + config.icon;
     }
