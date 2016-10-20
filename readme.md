@@ -1,9 +1,10 @@
 Modal component
 ===============
 
-[![Build Status](https://img.shields.io/travis/magsdk/component-modal.svg?style=flat-square)](https://travis-ci.org/magsdk/component-modal)
-[![NPM version](https://img.shields.io/npm/v/mag-component-modal.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-modal)
-[![Dependencies Status](https://img.shields.io/david/magsdk/component-modal.svg?style=flat-square)](https://david-dm.org/magsdk/component-modal)
+[![build status](https://img.shields.io/travis/magsdk/component-modal.svg?style=flat-square)](https://travis-ci.org/magsdk/component-modal)
+[![npm version](https://img.shields.io/npm/v/mag-component-modal.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-modal)
+[![dependencies status](https://img.shields.io/david/magsdk/component-modal.svg?style=flat-square)](https://david-dm.org/magsdk/component-modal)
+[![devDependencies status](https://img.shields.io/david/dev/magsdk/component-modal.svg?style=flat-square)](https://david-dm.org/magsdk/component-modal?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
 
 
