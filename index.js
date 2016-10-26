@@ -68,8 +68,7 @@ function Modal ( config ) {
     config.$body.className = 'body';
     // add default close by click
     config.events.click = config.events.click || function () { self.hide(); };
-
-
+    
     // parent constructor call
     Component.call(this, config);
 
