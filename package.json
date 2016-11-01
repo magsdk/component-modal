@@ -1,6 +1,6 @@
 {
     "name": "mag-component-modal",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Base layout list implementation.",
     "author": {
         "name": "Stanislav Kalashnik",
@@ -17,8 +17,8 @@
         "jsdoc": "jsdoc --destination doc *.js readme.md"
     },
     "dependencies": {
-        "mag-component-list": "magsdk/component-list",
-        "stb-component": "stbsdk/component"
+        "mag-component-list": "1.*.*",
+        "stb-component": "1.*.*"
     },
     "devDependencies": {
         "eslint": "3.*.*",
