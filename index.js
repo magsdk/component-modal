@@ -1,14 +1,14 @@
 /**
  * @license The MIT License (MIT)
- * @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
+ * @copyright Fedotov <bas.jsdev@gmail.com>
  */
 
 /* eslint no-path-concat: 0 */
 
 'use strict';
 
-// TODO: switch to stb-component-modal
-var Component = require('stb-component');
+
+var Component = require('stb-component-modal');
 
 
 /**
@@ -41,7 +41,7 @@ var Component = require('stb-component');
  * page.add(modalSort);
  */
 function Modal ( config ) {
-    var $overlay,
+    var $overlay, $body,
         self = this;
 
     // sanitize
@@ -71,9 +71,6 @@ function Modal ( config ) {
     config.focusable = config.focusable || false;
     // hide by default
     config.visible = config.visible || false;
-    // create centered div
-    config.$body = document.createElement('div');
-    config.$body.className = 'body';
     // add default close by click
     config.events.click = config.events.click || function () { self.hide(); };
 
@@ -104,8 +101,9 @@ function Modal ( config ) {
     $overlay.className = 'overlay';
 
     // add to dom
+    $body = this.$body.parentNode.removeChild(this.$body); // add body wrapper
     this.$node.firstChild.firstChild.appendChild(this.$header);
-    this.$node.firstChild.firstChild.appendChild(this.$body);
+    this.$node.firstChild.firstChild.appendChild($body);
     this.$node.firstChild.firstChild.appendChild($overlay);
 }
 
