@@ -40,8 +40,6 @@ var Component = require('stb-component');
  * });
  * page.add(modalSort);
  */
-
-
 function Modal ( config ) {
     var $overlay,
         self = this;
@@ -51,12 +49,22 @@ function Modal ( config ) {
     config.events = config.events || {};
 
     if ( DEVELOP ) {
-        if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
+        if ( typeof config !== 'object' ) {
+            throw new Error(__filename + ': wrong config type');
+        }
         // init parameters checks
-        if ( config.icon && typeof config.icon !== 'string' ) { throw new Error(__filename + ': wrong or empty config.icon'); }
-        if ( config.title && typeof config.title !== 'string' ) { throw new Error(__filename + ': wrong or empty config.title'); }
-        if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
-        if ( config.$body ) { throw new Error(__filename + ': config.$body should not be provided in Modal manually'); }
+        if ( config.icon && typeof config.icon !== 'string' ) {
+            throw new Error(__filename + ': wrong or empty config.icon');
+        }
+        if ( config.title && typeof config.title !== 'string' ) {
+            throw new Error(__filename + ': wrong or empty config.title');
+        }
+        if ( 'className' in config && (!config.className || typeof config.className !== 'string') ) {
+            throw new Error(__filename + ': wrong or empty config.className');
+        }
+        if ( config.$body ) {
+            throw new Error(__filename + ': config.$body should not be provided in Modal manually');
+        }
     }
 
     // usually can't accept focus
@@ -68,7 +76,7 @@ function Modal ( config ) {
     config.$body.className = 'body';
     // add default close by click
     config.events.click = config.events.click || function () { self.hide(); };
-    
+
     // parent constructor call
     Component.call(this, config);
 
