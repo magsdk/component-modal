@@ -8,14 +8,14 @@
 'use strict';
 
 
-var Component = require('stb-component-modal');
+var StbComponentModal = require('stb-component-modal');
 
 
 /**
  * Modal window implementation.
  *
  * @constructor
- * @extends Component
+ * @extends StbComponentModal
  *
  * @param {Object} [config={}] init parameters (all inherited from the parent)
  * @param {Object} [config.title] message title
@@ -75,7 +75,7 @@ function Modal ( config ) {
     config.events.click = config.events.click || function () { self.hide(); };
 
     // parent constructor call
-    Component.call(this, config);
+    StbComponentModal.call(this, config);
 
     // add table-cell wrappers
     this.$node.appendChild(document.createElement('div'));
@@ -109,7 +109,7 @@ function Modal ( config ) {
 
 
 // inheritance
-Modal.prototype = Object.create(Component.prototype);
+Modal.prototype = Object.create(StbComponentModal.prototype);
 Modal.prototype.constructor = Modal;
 
 // set component name
@@ -121,8 +121,8 @@ Modal.prototype.name = 'mag-component-modal';
  */
 Modal.prototype.focus = function () {
     this.$node.classList.add('active');
-    Component.prototype.focus.call(this);
-    if ( this.children[0] && this.children[0] instanceof Component ) {
+    StbComponentModal.prototype.focus.call(this);
+    if ( this.children[0] && this.children[0] instanceof StbComponentModal ) {
         this.children[0].focus();
     }
 };
@@ -133,7 +133,7 @@ Modal.prototype.focus = function () {
  */
 Modal.prototype.blur = function () {
     this.$node.classList.remove('active');
-    Component.prototype.blur.call(this);
+    StbComponentModal.prototype.blur.call(this);
 };
 
 

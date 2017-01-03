@@ -44,24 +44,10 @@
 
             }
             & > div.body > div {
-                //@include mag-component-list;
                 .item {
                     height: $panelTitleHeight;
                     line-height: $panelTitleHeight;
                     padding: 0 $safePadding;
-
-                    //div {
-                    //    @include spa-component-checkbox;
-                    //}, div {
-                    //    @include mag-component-layout;
-                    //}
-                    //> div.icon {
-                    //    //font-size: $fontSize * 1.75;
-                    //    height: $panelTitleHeight;
-                    //    line-height: $panelTitleHeight;
-                    //    width: $panelTitleHeight * 0.75;
-                    //    text-align: left;
-                    //}
                 }
             }
             & > div.overlay {
