@@ -8,7 +8,8 @@
 'use strict';
 
 
-var StbComponentModal = require('stb-component-modal');
+var StbComponentModal = require('stb-component-modal'),
+    Component         = require('stb-component');
 
 
 /**
@@ -122,7 +123,7 @@ Modal.prototype.name = 'mag-component-modal';
 Modal.prototype.focus = function () {
     this.$node.classList.add('active');
     StbComponentModal.prototype.focus.call(this);
-    if ( this.children[0] && this.children[0] instanceof StbComponentModal ) {
+    if ( this.children[0] && this.children[0] instanceof Component ) {
         this.children[0].focus();
     }
 };
