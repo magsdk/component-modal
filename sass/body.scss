@@ -43,11 +43,15 @@
                 }
 
             }
-            & > div.body > div {
-                .item {
-                    height: $panelTitleHeight;
-                    line-height: $panelTitleHeight;
-                    padding: 0 $safePadding;
+            & > div.body {
+                position:relative;
+
+                & > div {
+                    .item {
+                        height:$panelTitleHeight;
+                        line-height:$panelTitleHeight;
+                        padding:0 $safePadding;
+                    }
                 }
             }
             & > div.overlay {
