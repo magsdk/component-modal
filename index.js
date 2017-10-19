@@ -9,7 +9,8 @@
 
 
 var StbComponentModal = require('stb-component-modal'),
-    Component         = require('stb-component');
+    Component         = require('stb-component'),
+    keys              = require('stb-keys');
 
 
 /**
@@ -42,8 +43,8 @@ var StbComponentModal = require('stb-component-modal'),
  * page.add(modalSort);
  */
 function Modal ( config ) {
-    var $overlay, $body,
-        self = this;
+    var self = this,
+        $overlay, $body, onkeydown;
 
     // sanitize
     config = config || {};
@@ -74,6 +75,17 @@ function Modal ( config ) {
     config.visible = config.visible || false;
     // add default close by click
     config.events.click = config.events.click || function () { self.hide(); };
+    // add close window behavior, when pushed a back button or a menu button
+    onkeydown = config.events.keydown;
+    config.events.keydown = function (event) {
+        if ( event.code === keys.back || event.code === keys.menu ) {
+            event.stop = true;
+            self.hide();
+        }
+        if ( onkeydown ) {
+            onkeydown.call(this, event);
+        }
+    };
 
     // parent constructor call
     StbComponentModal.call(this, config);
