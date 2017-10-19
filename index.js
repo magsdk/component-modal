@@ -43,8 +43,8 @@ var StbComponentModal = require('stb-component-modal'),
  * page.add(modalSort);
  */
 function Modal ( config ) {
-    var $overlay, $body, onkeydown,
-        self = this;
+    var self = this,
+        $overlay, $body, onkeydown;
 
     // sanitize
     config = config || {};
@@ -82,7 +82,7 @@ function Modal ( config ) {
             event.stop = true;
             self.hide();
         }
-        if (onkeydown) {
+        if ( onkeydown ) {
             onkeydown.call(this, event);
         }
     };
