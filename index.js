@@ -10,7 +10,7 @@
 
 var StbComponentModal = require('stb-component-modal'),
     Component         = require('stb-component'),
-    keys              = require('spa-keys');
+    keys              = require('stb-keys');
 
 
 /**
