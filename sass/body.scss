@@ -10,6 +10,16 @@
     display: table;
     z-index: 10;
 
+    // modal use whole screen so for better optimisation replace display to visibility
+    & {
+        visibility:visible;
+
+        .hidden {
+            display:table;
+            visibility:hidden;
+        }
+    }
+
     &.active > div > div > div.overlay {
         display: none;
     }
