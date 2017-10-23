@@ -77,13 +77,13 @@ function Modal ( config ) {
     config.events.click = config.events.click || function () { self.hide(); };
     // add close window behavior, when pushed a back button or a menu button
     onkeydown = config.events.keydown;
-    config.events.keydown = function (event) {
+    config.events.keydown = function ( event ) {
+        if ( onkeydown ) {
+            onkeydown.call(this, event);
+        }
         if ( event.code === keys.back || event.code === keys.menu ) {
             event.stop = true;
             self.hide();
-        }
-        if ( onkeydown ) {
-            onkeydown.call(this, event);
         }
     };
 

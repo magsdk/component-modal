@@ -10,6 +10,11 @@
     z-index: 10; }
     .mag-component-modal.hidden {
         display: none; }
+    .mag-component-modal {
+        visibility: visible; }
+        .mag-component-modal .hidden {
+            display: table;
+            visibility: hidden; }
     .mag-component-modal.active > div > div > div.overlay {
         display: none; }
     .mag-component-modal > div {
