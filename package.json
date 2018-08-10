@@ -17,11 +17,11 @@
         "jsdoc": "jsdoc --destination docs *.js readme.md"
     },
     "dependencies": {
-        "stb-component-modal": "1.*.*",
-        "stb-component": "1.*.*"
+        "stb-component-modal": "^1.0.0",
+        "stb-component": "^1.4.0"
     },
     "devDependencies": {
-        "jsdoc": "3.*.*",
+        "jsdoc": "^3.5.5",
         "mag-eslint": "^1.0.0"
     },
     "keywords": [
