@@ -114,7 +114,8 @@ function Modal ( config ) {
     $overlay.className = 'overlay';
 
     // add to dom
-    $body = this.$body.parentNode.removeChild(this.$body); // add body wrapper
+    // add body wrapper
+    $body = this.$body.parentNode.removeChild(this.$body);
     this.$node.firstChild.firstChild.appendChild(this.$header);
     this.$node.firstChild.firstChild.appendChild($body);
     this.$node.firstChild.firstChild.appendChild($overlay);
